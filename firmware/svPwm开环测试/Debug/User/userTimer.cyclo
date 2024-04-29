@@ -1,0 +1,15 @@
+../User/userTimer.c:29:7:dealPerMs	8
+../User/userTimer.c:168:6:setCrossZero4timer	1
+../User/userTimer.c:174:6:initializeClock	1
+../User/userTimer.c:184:15:getFrequence	1
+../User/userTimer.c:209:6:getOneSecFlag	2
+../User/userTimer.c:220:6:getOneMsFlag	2
+../User/userTimer.c:231:6:getPowerLost	1
+../User/userTimer.c:236:6:getZeroErr	1
+../User/userTimer.c:244:6:getCrossZero	1
+../User/userTimer.c:248:6:get5MsFlag	2
+../User/userTimer.c:261:6:get10MsFlag	2
+../User/userTimer.c:274:6:get20MsFlag	2
+../User/userTimer.c:287:6:get30MsFlag	2
+../User/userTimer.c:300:6:get100MsFlag	2
+../User/userTimer.c:313:6:get500MsFlag	2

@@ -1,0 +1,2 @@
+../User/motor.c:8:6:motorInit	1
+../User/motor.c:15:6:motor1Drive	10

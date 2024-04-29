@@ -1,0 +1,5 @@
+../User/svPwm.c:7:13:getSector	1
+../User/svPwm.c:20:13:getXYZ	1
+../User/svPwm.c:31:13:vectorActionTimeCalculate	4
+../User/svPwm.c:53:13:setPhaseVoltage	13
+../User/svPwm.c:129:6:setSvPwm	1

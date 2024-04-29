@@ -1,0 +1,40 @@
+Dependencies for Project 'Svpwm', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\Source\Initialize.c)(0x660AA385)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\initialize.o --omf_browse .\objects\initialize.crf --depend .\objects\initialize.d)
+I (..\Source\..\Include\Initialize.h)(0x66057964)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\UserParams.h)(0x66057746)
+F (..\Source\Main.c)(0x660A2EE0)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\Source\..\Include\Main.h)(0x66057957)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\Define.h)(0x66057697)
+F (..\Source\Startup.s)(0x65D58420)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529" --pd "STM32G431xx SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (..\Source\Adc.c)(0x66057649)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\Source\..\Include\Adc.h)(0x660576CA)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\Define.h)(0x66057697)
+F (..\Source\Math.c)(0x66082BD3)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\math.o --omf_browse .\objects\math.crf --depend .\objects\math.d)
+I (..\Source\..\Include\Math.h)(0x660576D4)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\Define.h)(0x66057697)
+F (..\Include\Define.h)(0x66057697)()
+F (..\Include\Initialize.h)(0x66057964)()
+F (..\Include\Main.h)(0x66057957)()
+F (..\Include\stm32g431.h)(0x65D5AD35)()
+F (..\Include\Adc.h)(0x660576CA)()
+F (..\Include\Math.h)(0x660576D4)()
+F (..\Readme\Description.txt)(0x660633EB)()
+F (..\Source\Voltage.c)(0x660848E6)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\voltage.o --omf_browse .\objects\voltage.crf --depend .\objects\voltage.d)
+I (..\Source\..\Include\Voltage.h)(0x6605771C)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\CoreDef.h)(0x66057735)
+I (..\Source\..\Include\..\Include\UserParams.h)(0x66057746)
+F (..\Source\Core.c)(0x66084A80)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\core.o --omf_browse .\objects\core.crf --depend .\objects\core.d)
+I (..\Source\..\Include\Core.h)(0x66057943)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\CoreDef.h)(0x66057735)
+I (..\Source\..\Include\..\Include\UserParams.h)(0x66057746)
+F (..\Include\Voltage.h)(0x6605771C)()
+F (..\Include\Core.h)(0x66057943)()
+F (..\Include\CoreDef.h)(0x66057735)()
+F (..\Include\UserParams.h)(0x66057746)()

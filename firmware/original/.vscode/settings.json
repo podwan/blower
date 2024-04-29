@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "foc_utils.h": "c",
+        "stm32g4xx_hal.h": "c",
+        "usermain.h": "c",
+        "stm32g4xx_hal_conf.h": "c",
+        "stm32g4xx_hal_tim.h": "c"
+    }
+}

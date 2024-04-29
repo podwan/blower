@@ -1,0 +1,12 @@
+../User/Initialize.c:29:6:Initialize	8	static
+../User/Initialize.c:45:13:SysClockInit	4	static
+../User/Initialize.c:87:13:GpioInit	4	static
+../User/Initialize.c:112:13:PwmInit	8	static
+../User/Initialize.c:172:13:CompInit	4	static
+../User/Initialize.c:195:13:OpAmpInit	4	static
+../User/Initialize.c:224:13:AdcInit	16	static
+../User/Initialize.c:310:13:DacInit	4	static
+../User/Initialize.c:327:13:CORDICInit	4	static
+../User/Initialize.c:334:13:Timer1Init	4	static
+../User/Initialize.c:353:13:NvicInit	4	static
+../User/Initialize.c:361:13:delay	16	static

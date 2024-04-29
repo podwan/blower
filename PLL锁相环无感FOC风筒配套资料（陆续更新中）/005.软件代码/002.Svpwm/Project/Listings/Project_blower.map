@@ -1,0 +1,264 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    initialize.o(i.AdcInit) refers to initialize.o(i.delay) for delay
+    initialize.o(i.Initialize) refers to initialize.o(i.SysClockInit) for SysClockInit
+    initialize.o(i.Initialize) refers to initialize.o(i.GpioInit) for GpioInit
+    initialize.o(i.Initialize) refers to initialize.o(i.DacInit) for DacInit
+    initialize.o(i.Initialize) refers to initialize.o(i.OpAmpInit) for OpAmpInit
+    initialize.o(i.Initialize) refers to initialize.o(i.CompInit) for CompInit
+    initialize.o(i.Initialize) refers to initialize.o(i.PwmInit) for PwmInit
+    initialize.o(i.Initialize) refers to initialize.o(i.AdcInit) for AdcInit
+    initialize.o(i.Initialize) refers to initialize.o(i.CORDICInit) for CORDICInit
+    initialize.o(i.Initialize) refers to initialize.o(i.Timer1Init) for Timer1Init
+    initialize.o(i.Initialize) refers to initialize.o(i.NvicInit) for NvicInit
+    initialize.o(i.PwmInit) refers to initialize.o(i.delay) for delay
+    main.o(i.ADC1_2_IRQHandler) refers to adc.o(i.AdcSample) for AdcSample
+    main.o(i.ADC1_2_IRQHandler) refers to core.o(i.CoreMachine) for CoreMachine
+    main.o(i.ADC1_2_IRQHandler) refers to main.o(i.SysTimeCount) for SysTimeCount
+    main.o(i.Main) refers to initialize.o(i.Initialize) for Initialize
+    main.o(i.Main) refers to main.o(.data) for tSystem
+    main.o(i.Main) refers to core.o(.data) for tGlobal
+    main.o(i.SysTimeCount) refers to main.o(.data) for tSystem
+    startup.o(RESET) refers to startup.o(STACK) for __initial_sp
+    startup.o(RESET) refers to startup.o(.text) for Reset_Handler
+    startup.o(RESET) refers to main.o(i.ADC1_2_IRQHandler) for ADC1_2_IRQHandler
+    startup.o(.text) refers to main.o(i.Main) for Main
+    adc.o(i.AdcSample) refers to adc.o(.bss) for tAdc
+    voltage.o(i.GetUsSector) refers to voltage.o(.bss) for tUm
+    voltage.o(i.GetUxyz) refers to math.o(i.CalSinCos) for CalSinCos
+    voltage.o(i.GetUxyz) refers to voltage.o(.bss) for tUm
+    voltage.o(i.SvpwmOut) refers to voltage.o(i.VectorActionTimeCalculate) for VectorActionTimeCalculate
+    voltage.o(i.SvpwmOut) refers to voltage.o(.bss) for tUm
+    voltage.o(i.UsOut) refers to voltage.o(i.GetUsSector) for GetUsSector
+    voltage.o(i.UsOut) refers to voltage.o(i.GetUxyz) for GetUxyz
+    voltage.o(i.UsOut) refers to voltage.o(i.SvpwmOut) for SvpwmOut
+    voltage.o(i.VectorActionTimeCalculate) refers to voltage.o(.bss) for tUm
+    voltage.o(i.VoltageInitialize) refers to voltage.o(.bss) for tUm
+    core.o(i.CoreInitialize) refers to voltage.o(i.VoltageInitialize) for VoltageInitialize
+    core.o(i.CoreInitialize) refers to core.o(.data) for tGlobal
+    core.o(i.CoreInitialize) refers to core.o(.bss) for tCore
+    core.o(i.CoreMachine) refers to core.o(i.Close6Pwm) for Close6Pwm
+    core.o(i.CoreMachine) refers to voltage.o(i.VoltageInitialize) for VoltageInitialize
+    core.o(i.CoreMachine) refers to core.o(i.Open3LowPwm) for Open3LowPwm
+    core.o(i.CoreMachine) refers to core.o(i.Open6WorkPwm) for Open6WorkPwm
+    core.o(i.CoreMachine) refers to voltage.o(i.UsOut) for UsOut
+    core.o(i.CoreMachine) refers to core.o(.bss) for tCore
+    core.o(i.CoreMachine) refers to core.o(.data) for tGlobal
+    core.o(i.CoreMachine) refers to voltage.o(.bss) for tUm
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (512 bytes).
+    Removing core.o(i.CoreInitialize), (28 bytes).
+
+2 unused section(s) (total 540 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ..\Source\Adc.c                          0x00000000   Number         0  adc.o ABSOLUTE
+    ..\Source\Core.c                         0x00000000   Number         0  core.o ABSOLUTE
+    ..\Source\Initialize.c                   0x00000000   Number         0  initialize.o ABSOLUTE
+    ..\Source\Main.c                         0x00000000   Number         0  main.o ABSOLUTE
+    ..\Source\Math.c                         0x00000000   Number         0  math.o ABSOLUTE
+    ..\Source\Startup.s                      0x00000000   Number         0  startup.o ABSOLUTE
+    ..\Source\Voltage.c                      0x00000000   Number         0  voltage.o ABSOLUTE
+    RESET                                    0x08000000   Section      472  startup.o(RESET)
+    .text                                    0x080001d8   Section       64  startup.o(.text)
+    $v0                                      0x080001d8   Number         0  startup.o(.text)
+    i.ADC1_2_IRQHandler                      0x08000218   Section        0  main.o(i.ADC1_2_IRQHandler)
+    i.AdcInit                                0x08000244   Section        0  initialize.o(i.AdcInit)
+    AdcInit                                  0x08000245   Thumb Code   376  initialize.o(i.AdcInit)
+    i.AdcSample                              0x080003d4   Section        0  adc.o(i.AdcSample)
+    i.CORDICInit                             0x08000430   Section        0  initialize.o(i.CORDICInit)
+    CORDICInit                               0x08000431   Thumb Code    14  initialize.o(i.CORDICInit)
+    i.CalSinCos                              0x08000444   Section        0  math.o(i.CalSinCos)
+    i.Close6Pwm                              0x08000478   Section        0  core.o(i.Close6Pwm)
+    Close6Pwm                                0x08000479   Thumb Code    26  core.o(i.Close6Pwm)
+    i.CompInit                               0x08000498   Section        0  initialize.o(i.CompInit)
+    CompInit                                 0x08000499   Thumb Code    20  initialize.o(i.CompInit)
+    i.CoreMachine                            0x080004b8   Section        0  core.o(i.CoreMachine)
+    i.DacInit                                0x080005c8   Section        0  initialize.o(i.DacInit)
+    DacInit                                  0x080005c9   Thumb Code    60  initialize.o(i.DacInit)
+    i.GetUsSector                            0x08000610   Section        0  voltage.o(i.GetUsSector)
+    GetUsSector                              0x08000611   Thumb Code   120  voltage.o(i.GetUsSector)
+    i.GetUxyz                                0x0800068c   Section        0  voltage.o(i.GetUxyz)
+    GetUxyz                                  0x0800068d   Thumb Code   102  voltage.o(i.GetUxyz)
+    i.GpioInit                               0x080006f8   Section        0  initialize.o(i.GpioInit)
+    GpioInit                                 0x080006f9   Thumb Code   112  initialize.o(i.GpioInit)
+    i.Initialize                             0x08000774   Section        0  initialize.o(i.Initialize)
+    i.Main                                   0x080007a0   Section        0  main.o(i.Main)
+    i.NvicInit                               0x080007c8   Section        0  initialize.o(i.NvicInit)
+    NvicInit                                 0x080007c9   Thumb Code    24  initialize.o(i.NvicInit)
+    i.OpAmpInit                              0x080007e8   Section        0  initialize.o(i.OpAmpInit)
+    OpAmpInit                                0x080007e9   Thumb Code    64  initialize.o(i.OpAmpInit)
+    i.Open3LowPwm                            0x0800083c   Section        0  core.o(i.Open3LowPwm)
+    Open3LowPwm                              0x0800083d   Thumb Code    40  core.o(i.Open3LowPwm)
+    i.Open6WorkPwm                           0x08000868   Section        0  core.o(i.Open6WorkPwm)
+    Open6WorkPwm                             0x08000869   Thumb Code    22  core.o(i.Open6WorkPwm)
+    i.PwmInit                                0x08000884   Section        0  initialize.o(i.PwmInit)
+    PwmInit                                  0x08000885   Thumb Code   454  initialize.o(i.PwmInit)
+    i.SvpwmOut                               0x08000a6c   Section        0  voltage.o(i.SvpwmOut)
+    SvpwmOut                                 0x08000a6d   Thumb Code   274  voltage.o(i.SvpwmOut)
+    i.SysClockInit                           0x08000b88   Section        0  initialize.o(i.SysClockInit)
+    SysClockInit                             0x08000b89   Thumb Code   108  initialize.o(i.SysClockInit)
+    i.SysTimeCount                           0x08000c04   Section        0  main.o(i.SysTimeCount)
+    SysTimeCount                             0x08000c05   Thumb Code    38  main.o(i.SysTimeCount)
+    i.Timer1Init                             0x08000c30   Section        0  initialize.o(i.Timer1Init)
+    Timer1Init                               0x08000c31   Thumb Code    90  initialize.o(i.Timer1Init)
+    i.UsOut                                  0x08000c94   Section        0  voltage.o(i.UsOut)
+    i.VectorActionTimeCalculate              0x08000cb0   Section        0  voltage.o(i.VectorActionTimeCalculate)
+    VectorActionTimeCalculate                0x08000cb1   Thumb Code   106  voltage.o(i.VectorActionTimeCalculate)
+    i.VoltageInitialize                      0x08000d20   Section        0  voltage.o(i.VoltageInitialize)
+    i.delay                                  0x08000d30   Section        0  initialize.o(i.delay)
+    delay                                    0x08000d31   Thumb Code    12  initialize.o(i.delay)
+    .data                                    0x20000000   Section        4  main.o(.data)
+    .data                                    0x20000004   Section        2  core.o(.data)
+    .bss                                     0x20000008   Section      104  adc.o(.bss)
+    .bss                                     0x20000070   Section       30  voltage.o(.bss)
+    .bss                                     0x20000090   Section       12  core.o(.bss)
+    STACK                                    0x200000a0   Section     1024  startup.o(STACK)
+    __initial_sp                             0x200004a0   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup.o(RESET)
+    Reset_Handler                            0x080001d9   Thumb Code    48  startup.o(.text)
+    ADC1_2_IRQHandler                        0x08000219   Thumb Code    44  main.o(i.ADC1_2_IRQHandler)
+    AdcSample                                0x080003d5   Thumb Code    84  adc.o(i.AdcSample)
+    CalSinCos                                0x08000445   Thumb Code    44  math.o(i.CalSinCos)
+    CoreMachine                              0x080004b9   Thumb Code   252  core.o(i.CoreMachine)
+    Initialize                               0x08000775   Thumb Code    44  initialize.o(i.Initialize)
+    Main                                     0x080007a1   Thumb Code    30  main.o(i.Main)
+    UsOut                                    0x08000c95   Thumb Code    26  voltage.o(i.UsOut)
+    VoltageInitialize                        0x08000d21   Thumb Code    10  voltage.o(i.VoltageInitialize)
+    tSystem                                  0x20000000   Data           4  main.o(.data)
+    tGlobal                                  0x20000004   Data           2  core.o(.data)
+    tAdc                                     0x20000008   Data         104  adc.o(.bss)
+    tUm                                      0x20000070   Data          30  voltage.o(.bss)
+    tCore                                    0x20000090   Data          12  core.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080001d9
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000d44, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000d3c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000001d8   Data   RO          114    RESET               startup.o
+    0x080001d8   0x080001d8   0x00000040   Code   RO          115  * .text               startup.o
+    0x08000218   0x08000218   0x0000002c   Code   RO           79    i.ADC1_2_IRQHandler  main.o
+    0x08000244   0x08000244   0x00000190   Code   RO            1    i.AdcInit           initialize.o
+    0x080003d4   0x080003d4   0x0000005c   Code   RO          120    i.AdcSample         adc.o
+    0x08000430   0x08000430   0x00000014   Code   RO            2    i.CORDICInit        initialize.o
+    0x08000444   0x08000444   0x00000034   Code   RO          138    i.CalSinCos         math.o
+    0x08000478   0x08000478   0x00000020   Code   RO          201    i.Close6Pwm         core.o
+    0x08000498   0x08000498   0x00000020   Code   RO            3    i.CompInit          initialize.o
+    0x080004b8   0x080004b8   0x00000110   Code   RO          203    i.CoreMachine       core.o
+    0x080005c8   0x080005c8   0x00000048   Code   RO            4    i.DacInit           initialize.o
+    0x08000610   0x08000610   0x0000007c   Code   RO          153    i.GetUsSector       voltage.o
+    0x0800068c   0x0800068c   0x0000006c   Code   RO          154    i.GetUxyz           voltage.o
+    0x080006f8   0x080006f8   0x0000007c   Code   RO            5    i.GpioInit          initialize.o
+    0x08000774   0x08000774   0x0000002c   Code   RO            6    i.Initialize        initialize.o
+    0x080007a0   0x080007a0   0x00000028   Code   RO           80    i.Main              main.o
+    0x080007c8   0x080007c8   0x00000020   Code   RO            7    i.NvicInit          initialize.o
+    0x080007e8   0x080007e8   0x00000054   Code   RO            8    i.OpAmpInit         initialize.o
+    0x0800083c   0x0800083c   0x0000002c   Code   RO          204    i.Open3LowPwm       core.o
+    0x08000868   0x08000868   0x0000001c   Code   RO          205    i.Open6WorkPwm      core.o
+    0x08000884   0x08000884   0x000001e8   Code   RO            9    i.PwmInit           initialize.o
+    0x08000a6c   0x08000a6c   0x0000011c   Code   RO          155    i.SvpwmOut          voltage.o
+    0x08000b88   0x08000b88   0x0000007c   Code   RO           10    i.SysClockInit      initialize.o
+    0x08000c04   0x08000c04   0x0000002c   Code   RO           81    i.SysTimeCount      main.o
+    0x08000c30   0x08000c30   0x00000064   Code   RO           11    i.Timer1Init        initialize.o
+    0x08000c94   0x08000c94   0x0000001a   Code   RO          156    i.UsOut             voltage.o
+    0x08000cae   0x08000cae   0x00000002   PAD
+    0x08000cb0   0x08000cb0   0x00000070   Code   RO          157    i.VectorActionTimeCalculate  voltage.o
+    0x08000d20   0x08000d20   0x00000010   Code   RO          158    i.VoltageInitialize  voltage.o
+    0x08000d30   0x08000d30   0x0000000c   Code   RO           12    i.delay             initialize.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000d3c, Size: 0x00000008, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000d3c   0x00000004   Data   RW           82    .data               main.o
+    0x20000004   0x08000d40   0x00000002   Data   RW          207    .data               core.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000008, Load base: 0x08000d44, Size: 0x00000498, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000008        -       0x00000068   Zero   RW          121    .bss                adc.o
+    0x20000070        -       0x0000001e   Zero   RW          159    .bss                voltage.o
+    0x2000008e   0x08000d44   0x00000002   PAD
+    0x20000090        -       0x0000000c   Zero   RW          206    .bss                core.o
+    0x2000009c   0x08000d44   0x00000004   PAD
+    0x200000a0        -       0x00000400   Zero   RW          112    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        92          8          0          0        104        683   adc.o
+       376         36          0          2         12       2170   core.o
+      1532        154          0          0          0       7373   initialize.o
+       128         16          0          4          0       2697   main.o
+        52          8          0          0          0        692   math.o
+        64         16        472          0       1024        436   startup.o
+       670         40          0          0         30       5182   voltage.o
+
+    ----------------------------------------------------------------------
+      2916        278        472          8       1176      19233   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         2          0          0          2          6          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2916        278        472          8       1176      16833   Grand Totals
+      2916        278        472          8       1176      16833   ELF Image Totals
+      2916        278        472          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3388 (   3.31kB)
+    Total RW  Size (RW Data + ZI Data)              1184 (   1.16kB)
+    Total ROM Size (Code + RO Data + RW Data)       3396 (   3.32kB)
+
+==============================================================================
+
