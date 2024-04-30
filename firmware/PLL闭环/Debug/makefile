@@ -61,8 +61,8 @@ all: main-build
 main-build: blower.elf secondary-outputs
 
 # Tool invocations
-blower.elf blower.map: $(OBJS) $(USER_OBJS) G:\workSpace\KX\121_blower\firmware\svPwm开环测试\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "blower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"G:\workSpace\KX\121_blower\firmware\svPwm开环测试\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blower.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+blower.elf blower.map: $(OBJS) $(USER_OBJS) G:\workSpace\KX\121_blower\firmware\PLL闭环\STM32G431CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "blower.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"G:\workSpace\KX\121_blower\firmware\PLL闭环\STM32G431CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blower.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

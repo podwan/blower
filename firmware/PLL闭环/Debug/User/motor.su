@@ -1,2 +1,2 @@
-../User/motor.c:8:6:motorInit	4	static
-../User/motor.c:15:6:motor1Drive	8	static
+../User/motor.c:11:6:motorInit	8	static
+../User/motor.c:25:6:motor1Drive	8	static

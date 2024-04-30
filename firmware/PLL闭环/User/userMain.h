@@ -33,6 +33,10 @@ typedef unsigned long ulong;
 
 typedef struct
 {
+    signed short int Ualpha;
+    signed short int Ubeta;
+    signed short int Ud;
+    signed short int Uq;
     signed short int X;
     signed short int Y;
     signed short int Z;
@@ -47,8 +51,97 @@ typedef struct
     unsigned short int CCR2;
     unsigned short int CCR3;
     void (*setPwm)(unsigned short int, unsigned short int, unsigned short int);
-} SvPwm;
+} Voltages;
+/*===========================================================================*/
+typedef struct
+{
+    unsigned short int IaValue;
+    unsigned short int IbValue;
 
+    signed short int Ia;
+    signed short int Ib;
+    signed short int Ic;
+
+    signed short int Ialpha;
+    signed short int IalphaLast;
+    signed short int Ibeta;
+    signed short int IbetaLast;
+
+    signed short int Id;
+    signed short int Iq;
+
+    signed short int IoffsetA;
+    signed short int IoffsetB;
+
+    signed short int IdGiven;
+    signed short int IqGiven;
+
+    signed short int ParkAngle;
+} Currents;
+/*===========================================================================*/
+typedef enum
+{
+    MOTOR_STOP,
+    MOTOR_START,
+    MOTOR_WAIT,
+    MOTOR_RUN,
+} MotorState;
+/*===========================================================================*/
+
+typedef struct
+{
+    float P;             //!< Proportional gain
+    float I;             //!< Integral gain
+    float D;             //!< Derivative gain
+    float output_ramp;   //!< Maximum speed of change of the output value
+    float limit;         //!< Maximum output value
+    float error_prev;    //!< last tracking error value
+    float output_prev;   //!< last pid output value
+    float integral_prev; //!< last integral component value
+    float Ts;
+} PidController;
+/*===========================================================================*/
+
+typedef struct
+{
+    unsigned short int Tick;
+    unsigned int Tick1s;
+    unsigned short int FaultNum;
+    MotorState state;
+    Voltages voltages;
+    Currents currents;
+    PidController PiId;
+    PidController PiIq;
+} Motor;
+/*===========================================================================*/
+
+typedef struct
+{
+    unsigned short int LedStatus;
+    unsigned short int IaValue;
+    unsigned short int IbValue;
+    unsigned short int IaOffset;
+    unsigned short int IbOffset;
+
+    unsigned short int VbusAverage;
+    unsigned short int VbusInstant;
+    unsigned short int TargetVbus;
+
+    unsigned short int OffsetReq;
+    signed short int qSetIq;
+
+    unsigned short int MotorStatus;
+    unsigned short int ErrorCode;
+
+    unsigned short int HTAverage;
+    unsigned short int NTCAverage;
+
+    unsigned short int V12Average;
+    unsigned short int OPAMP3Instant;
+
+    unsigned int RunTime;
+} tGlobal_TypeDef;
+/*===========================================================================*/
 typedef enum
 {
     false,

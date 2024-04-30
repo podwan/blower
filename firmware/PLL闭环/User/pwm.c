@@ -1,6 +1,6 @@
 
 #include "pwm.h"
-#include "svpwm.h"
+#include "voltage.h"
 
 void setPwm1(unsigned short int a, unsigned short int b, unsigned short int c)
 {

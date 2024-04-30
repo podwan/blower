@@ -1,19 +1,30 @@
 #include "motor.h"
-#include "svPwm.h"
+#include "voltage.h"
 #include "pwm.h"
 #include "foc_utils.h"
-
+#include "Adc.h"
+#include "current.h"
+#include "pid.h"
+tGlobal_TypeDef tGlobal;
 Motor motor1;
 
 void motorInit()
 {
-    motor1.state = MOTOR_START;
-    motor1.svPwm.percentMax = MAX_PERCENT;
-    motor1.svPwm.setPwm = setPwm1;
+    motor1.state = MOTOR_STOP;
+    motor1.voltages.percentMax = MAX_PERCENT;
+    motor1.voltages.setPwm = setPwm1;
+    tGlobal.OffsetReq = 1;
+    CurrentInitialize(&motor1);
+    tGlobal.LedStatus = 0;
+    motor1.FaultNum = 0;
+    motor1.PiId.P = I_KP;
+    motor1.PiId.I = I_KI;
+    motor1.PiId.limit = I_LIMIT;
 }
 
 void motor1Drive()
 {
+    currentSample(&motor1);
     if (motor1.Tick)
         motor1.Tick--;
 
@@ -26,7 +37,7 @@ void motor1Drive()
             motor1.state = MOTOR_STOP;
 
             Close6Pwm1();
-
+            tGlobal.ErrorCode = 1;
             TIM8->SR &= 0xffffff7f;
         }
         else
@@ -42,6 +53,27 @@ void motor1Drive()
         case MOTOR_STOP:
 
             Close6Pwm1();
+            InitAdcOffset();
+
+            tGlobal.LedStatus = 0;
+
+            tGlobal.RunTime = 0;
+
+            if (tGlobal.ErrorCode == 0)
+            {
+                if (tGlobal.OffsetReq)
+                {
+                    CalAdcOffset();
+                }
+                else
+                {
+                    GetCurrentOffset();
+                    motor1.state = MOTOR_START;
+
+                    tGlobal.RunTime = 0;
+                    motor1.Tick1s = 25000;
+                }
+            }
 
             break;
 
@@ -63,11 +95,11 @@ void motor1Drive()
 
         case MOTOR_RUN:
             Open6WorkPwm1();
-            motor1.svPwm.percent = 0.15;
-            motor1.svPwm.eAngle += 0.01;
-            if (motor1.svPwm.eAngle > _2PI)
-                motor1.svPwm.eAngle = 0;
-            setSvPwm(&motor1.svPwm, motor1.svPwm.percent, motor1.svPwm.eAngle);
+            motor1.voltages.percent = 0.15;
+            motor1.voltages.eAngle += 0.01;
+            if (motor1.voltages.eAngle > _2PI)
+                motor1.voltages.eAngle = 0;
+            setPhaseVoltage(&motor1.voltages);
             break;
         default:
             motor1.state = MOTOR_STOP;
@@ -77,6 +109,7 @@ void motor1Drive()
 
     // DAC看波形
 
-    //    DAC->DHR12R1 = motor1.svPwm.eAngle ;
-    DAC->DHR12R1 = motor1.svPwm.CCR1;
+    //    DAC->DHR12R1 = motor1.voltages.eAngle ;
+    DAC->DHR12R1 = motor1.voltages.CCR1;
 }
+

@@ -1,4 +1,4 @@
-User/motor.o: ../User/motor.c ../User/motor.h ../User/userMain.h \
+User/voltage.o: ../User/voltage.c ../User/voltage.h ../User/userMain.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -36,9 +36,9 @@ User/motor.o: ../User/motor.c ../User/motor.h ../User/userMain.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/tim.h ../Core/Inc/main.h ../User/voltage.h ../User/pwm.h \
- ../User/foc_utils.h ../User/Adc.h ../User/current.h ../User/pid.h
-../User/motor.h:
+ ../Core/Inc/tim.h ../Core/Inc/main.h ../User/foc_utils.h ../User/pwm.h \
+ ../User/current.h ../User/pid.h
+../User/voltage.h:
 ../User/userMain.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -79,9 +79,7 @@ User/motor.o: ../User/motor.c ../User/motor.h ../User/userMain.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
-../User/voltage.h:
-../User/pwm.h:
 ../User/foc_utils.h:
-../User/Adc.h:
+../User/pwm.h:
 ../User/current.h:
 ../User/pid.h:

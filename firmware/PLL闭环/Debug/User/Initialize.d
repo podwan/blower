@@ -36,7 +36,7 @@ User/Initialize.o: ../User/Initialize.c ../User/Initialize.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/tim.h ../Core/Inc/main.h ../User/svPwm.h
+ ../Core/Inc/tim.h ../Core/Inc/main.h ../User/voltage.h
 ../User/Initialize.h:
 ../User/userMain.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
@@ -78,4 +78,4 @@ User/Initialize.o: ../User/Initialize.c ../User/Initialize.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
-../User/svPwm.h:
+../User/voltage.h:

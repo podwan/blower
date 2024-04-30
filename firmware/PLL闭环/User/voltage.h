@@ -1,5 +1,5 @@
-#ifndef __SVPWM_H
-#define __SVPWM_H
+#ifndef __VOLTAGE_H
+#define __VOLTAGE_H
 
 #include "userMain.h"
 
@@ -11,5 +11,5 @@
 
 /*===========================================================================*/
 
-void setSvPwm(SvPwm *svPwm, float percent, float theta);
+void setPhaseVoltage(Voltages *voltages);
 #endif

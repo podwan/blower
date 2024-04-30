@@ -1,14 +1,14 @@
 /**************************************************************************************************
- * ÕÅ·ÉÊµÕ½µç×ÓFOC¸ß½×¿Î³Ì
+ * ï¿½Å·ï¿½ÊµÕ½ï¿½ï¿½ï¿½ï¿½FOCï¿½ß½×¿Î³ï¿½
  * @project Svpwm
  * @file    Initialize.c
- * @author  ÕÅ·ÉÊµÕ½µç×ÓÍÅ¶Ó
+ * @author  ï¿½Å·ï¿½ÊµÕ½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½
  * @date    2024/3/28
  * @version V100
- * @Copyright  Èí¼þÖø×÷È¨ÕÅ·ÉÊµÕ½µç×ÓËùÓÐ
+ * @Copyright  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Å·ï¿½ÊµÕ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  **************************************************************************************************/
 #include "Initialize.h"
-#include "svPwm.h"
+#include "voltage.h"
 
 static void delay(unsigned int time);
 
@@ -24,7 +24,7 @@ static void Timer1Init(void);
 static void NvicInit(void);
 
 /**********************************************
- * ÍâÉè¼°Ó¦ÓÃ³ÌÐò³õÊ¼»¯
+ * ï¿½ï¿½ï¿½è¼°Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
  **********************************************/
 void Initialize(void)
 {
@@ -40,7 +40,7 @@ void Initialize(void)
     NvicInit();
 }
 /**********************************************
- * ÏµÍ³Ê±ÖÓÅäÖÃ
+ * ÏµÍ³Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  **********************************************/
 static void SysClockInit(void)
 {
@@ -58,7 +58,7 @@ static void SysClockInit(void)
     RCC->PLLCFGR |= 0x31012812; // M = 2 N = 40 R = 2 PLLRCLK = 160MHZ		HSI16
 
     RCC->CR |= 0x01000000; // PLLON
-    // µÈ´ýPLLËø¶¨Íê³É			PLLRDY
+    // ï¿½È´ï¿½PLLï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½			PLLRDY
     while ((RCC->CR & 0x02000000) == 0)
     {
     }
@@ -73,7 +73,7 @@ static void SysClockInit(void)
     }
 }
 /**********************************************
- * Êý×ÖIO¿ÚÅäÖÃ
+ * ï¿½ï¿½ï¿½ï¿½IOï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * PA8 -- TIM1_CH1 trigger SCR		output
  * PA9 -- TIM1_CH2 rece zero and speed set	input
  * PA10 -- TIM1_CH3 rece zero and speed set	input
@@ -99,7 +99,7 @@ static void GpioInit(void)
     GPIOF->MODER &= 0xfffffffc; // input
 }
 /**********************************************
- * PWMÅäÖÃ
+ * PWMï¿½ï¿½ï¿½ï¿½
  * PA15 --> TIM8CH1
  * PB3  --> TIM8CH1N
  * PB4  --> TIM8CH2N
@@ -133,25 +133,25 @@ static void PwmInit(void)
     GPIOB->AFR[1] |= 0x000000aa; // PB8=AF10=TIM8_CH2		PB9=AF10=TIM8_CH3
 
     TIM8->CNT = 0;
-    TIM8->PSC = 0;                           // ÎÞÔ¤·ÖÆµ
-    TIM8->ARR = (PWM_PERIOD_VALUE >> 1) - 1; // PWMÆµÂÊÎª25KHz  160MHz/25KHz = 6400 ÖÐÐÄ¶ÔÆë ÖØÔØÖµÉè¶¨Îª3200
+    TIM8->PSC = 0;                           // ï¿½ï¿½Ô¤ï¿½ï¿½Æµ
+    TIM8->ARR = (PWM_PERIOD_VALUE >> 1) - 1; // PWMÆµï¿½ï¿½Îª25KHz  160MHz/25KHz = 6400 ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Öµï¿½è¶¨Îª3200
 
-    TIM8->CR1 |= 0x00a0;     // Ê¹ÄÜÖÐÐÄ¶ÔÆëÄ£Ê½
+    TIM8->CR1 |= 0x00a0;     // Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½Ä£Ê½
     TIM8->CR1 |= 0x0100;     // tdts = 2*Ttim_ker_ck
     TIM8->CR2 |= 0x00700000; // TIM_TRGO2 OC4REF
 
     TIM8->CCMR1 = 0x00004848; // CC1S=0(CC1 channel output),	OC1FE=0(output compare 1 fast disable),	OC1PE=1(output compare 1 preload enable)
                               // OC1M = Force inactive level
     TIM8->CCMR2 |= 0x00006848;
-    TIM8->CCER |= 0x00001DDD; // ËùÓÐÍ¨µÀÊä³öµÍµçÆ½	CC1E=1(OC1 Enable),		CC1P=0(OC1 active high),
+    TIM8->CCER |= 0x00001DDD; // ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½Æ½	CC1E=1(OC1 Enable),		CC1P=0(OC1 active high),
                               //						CC1NE=1(CC1N Enable),	CC1NP=0(tim_oc1n active high),
     TIM8->CCR1 = 1000;
     TIM8->CCR2 = 1000;
     TIM8->CCR3 = 1000;
-    TIM8->CCR4 = (PWM_PERIOD_VALUE >> 1) - 2; // Éè¶¨´¥·¢µã 3198
+    TIM8->CCR4 = (PWM_PERIOD_VALUE >> 1) - 2; // ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3198
 
     TIM8->BDTR = 0;
-    TIM8->BDTR |= 0x000e0880; // filter 2.4us	OSSR=1	ËÀÇø (64 + 32) x 2 x 1/80 = 2.4us
+    TIM8->BDTR |= 0x000e0880; // filter 2.4us	OSSR=1	ï¿½ï¿½ï¿½ï¿½ (64 + 32) x 2 x 1/80 = 2.4us
 
     TIM8->AF1 = 0x00000010;   // BKCMP4E
     TIM8->AF2 = 0x00000000;   // BKIN2 disable
@@ -161,10 +161,10 @@ static void PwmInit(void)
 
     TIM8->SR &= 0xffffff7f;
     TIM8->BDTR |= 0x00001000; // BKE=1
-    TIM8->CR1 |= 0x0001;      // Ê¹ÄÜ¶¨Ê±Æ÷8
+    TIM8->CR1 |= 0x0001;      // Ê¹ï¿½Ü¶ï¿½Ê±ï¿½ï¿½8
 }
 /**********************************************
- * COMPÅäÖÃ
+ * COMPï¿½ï¿½ï¿½ï¿½
  * COMP4
  * PB0 - COMP4_INP
  *
@@ -176,7 +176,7 @@ static void CompInit(void)
                                 // HYST=7(70mV),BLANKSEL=2(TIM8_OC5),BRGEN=0,SCALEN=0,VALUE=0,LOCK=0
 }
 /**********************************************
- * OPAMPÅäÖÃ
+ * OPAMPï¿½ï¿½ï¿½ï¿½
  * OPAMP1
  * PA1 OP1_VINP	(VINP0)
  * PA2 OP1_VOUT	(ADC1_IN3)
@@ -209,7 +209,7 @@ static void OpAmpInit(void)
     OPAMP3->CSR = 0x000000c5; // VP_SEL=1,VM=2,PGA-GAIN = 2
 }
 /**********************************************
- * ADCÅäÖÃ
+ * ADCï¿½ï¿½ï¿½ï¿½
  * PA0 --> Vbus  	ADC12_IN1
  * PA2 --> Ia		ADC1_IN3
  * PA6 --> Ib		ADC2_IN3
@@ -217,8 +217,8 @@ static void OpAmpInit(void)
  * PB11 --> bak   	ADC12_IN14
  * PB12 --> NTC	  	ADC1_IN11
  * PB14 --> HT     	ADC1_IN5
- * ·Ö²¼ ADC1  Ia ADC1_IN3    Vbus ADC12_IN1	  HT  ADC1_IN5        NTC ADC1_IN11
- * ·Ö²¼ ADC2  Ib ADC2_IN3	V12  ADC2_IN12    bak ADC12_IN14 	  OPAMP3 ADC2_IN18
+ * ï¿½Ö²ï¿½ ADC1  Ia ADC1_IN3    Vbus ADC12_IN1	  HT  ADC1_IN5        NTC ADC1_IN11
+ * ï¿½Ö²ï¿½ ADC2  Ib ADC2_IN3	V12  ADC2_IN12    bak ADC12_IN14 	  OPAMP3 ADC2_IN18
  * ADC clock 40MHz
  **********************************************/
 static void AdcInit(void)
@@ -230,16 +230,16 @@ static void AdcInit(void)
     RCC->CCIPR |= 0x10000000; // ADC CLOCK PLLP
 
     // Ð£×¼ADC
-    ADC1->CR &= 0xdfffffff; // DEEPPWD = 0£¬½â³ýµôµçÄ£Ê½
+    ADC1->CR &= 0xdfffffff; // DEEPPWD = 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½
     ADC1->CR |= 0x10000000; // ADC voltage regulator enable
-    // µÈ´ýÎÈÑ¹Æ÷Õý³££¬Ê±¼äÐèÒª20us
+    // ï¿½È´ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Òª20us
     delay(5000);
-    ADC2->CR &= 0xdfffffff; // DEEPPWD = 0£¬½â³ýµôµçÄ£Ê½
+    ADC2->CR &= 0xdfffffff; // DEEPPWD = 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½
     ADC2->CR |= 0x10000000; // ADC voltage regulator enable
-    // µÈ´ýÎÈÑ¹Æ÷Õý³££¬Ê±¼äÐèÒª20us
+    // ï¿½È´ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Òª20us
     delay(5000);
     ADC1->CR |= 0x80000000; // enable calibration
-    // µÈ´ýÐ£×¼Íê³É
+    // ï¿½È´ï¿½Ð£×¼ï¿½ï¿½ï¿½
     do
     {
         Temp = ADC1->CR;
@@ -247,20 +247,20 @@ static void AdcInit(void)
     } while (Temp != 0);
 
     ADC2->CR |= 0x80000000; // enable calibration
-    // µÈ´ýÐ£×¼Íê³É
+    // ï¿½È´ï¿½Ð£×¼ï¿½ï¿½ï¿½
     do
     {
         Temp = ADC2->CR;
         Temp &= 0x80000000;
     } while (Temp != 0);
 
-    // ADCÄ£¿é¹«¹²¼Ä´æÆ÷ÅäÖÃ
+    // ADCÄ£ï¿½é¹«ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     ADC12_COMMON->CCR |= 0x00000005; // Injected simultaneous mode only
 
-    // ADC1ÅäÖÃ
+    // ADC1ï¿½ï¿½ï¿½ï¿½
     ADC1->CFGR = 0x00000000; // Injected Queue enable
-    // ²ÉÑùÊ±¼ä
-    ADC1->SMPR1 = 0x12492492; // 12.5 + 12.5 = 25 ADC Clock cycles * £¨1/53.333MHz£© =  468.75ns
+    // ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    ADC1->SMPR1 = 0x12492492; // 12.5 + 12.5 = 25 ADC Clock cycles * ï¿½ï¿½1/53.333MHzï¿½ï¿½ =  468.75ns
     ADC1->SMPR2 = 0x02492492;
 
     // Injected sequence
@@ -269,32 +269,32 @@ static void AdcInit(void)
     ADC1->JSQR = 0x58a086ab; // TIM8_TRGO2 TRIGGER rising
 
     // interrupt
-    ADC1->ISR |= 0x00000001; // Çå³ýADRDYÎ»
-    ADC1->CR |= 0x00000001;  // Ê¹ÄÜADC1
-    // µÈ´ýADC×¼±¸ºÃ
+    ADC1->ISR |= 0x00000001; // ï¿½ï¿½ï¿½ADRDYÎ»
+    ADC1->CR |= 0x00000001;  // Ê¹ï¿½ï¿½ADC1
+    // ï¿½È´ï¿½ADC×¼ï¿½ï¿½ï¿½ï¿½
     do
     {
         Temp = ADC1->ISR;
         Temp &= 0x00000001;
     } while (Temp == 0);
-    ADC1->ISR |= 0x00000001; // Çå³ýADRDYÎ»
+    ADC1->ISR |= 0x00000001; // ï¿½ï¿½ï¿½ADRDYÎ»
 
-    // ADC2ÅäÖÃ
+    // ADC2ï¿½ï¿½ï¿½ï¿½
     ADC2->CFGR = 0x00000000;  // Injected Queue enable
-    ADC2->SMPR1 = 0x12492492; // 12.5 + 12.5 = 25 ADC Clock cycles * £¨1/53.333MHz£© =  468.75ns
+    ADC2->SMPR1 = 0x12492492; // 12.5 + 12.5 = 25 ADC Clock cycles * ï¿½ï¿½1/53.333MHzï¿½ï¿½ =  468.75ns
     ADC2->SMPR2 = 0x02492492;
 
     // 4 conversions		JEXTSEL[4:0]=9 tim8_trgo2
     // JSQ1=IN3(Ib) 	JSQ2=IN12(V15) 	JSQ3=IN14(VTS-B) 	JSQ4=IN18(OPAMP3)
     ADC2->JSQR = 0x91c606ab; // TIM8_TRGO2 TRIGGER rising
-    ADC2->CR |= 0x00000001;  // Ê¹ÄÜADC2
+    ADC2->CR |= 0x00000001;  // Ê¹ï¿½ï¿½ADC2
 
     do
     {
         Temp = ADC2->ISR;
         Temp &= 0x00000001;
     } while (Temp == 0);
-    ADC2->ISR |= 0x00000001; // Çå³ýADRDYÎ»
+    ADC2->ISR |= 0x00000001; // ï¿½ï¿½ï¿½ADRDYÎ»
 
     // interrupt enable
     ADC1->IER |= 0x00000040; // End of injected sequence of conversions interrupt enable
@@ -304,7 +304,7 @@ static void AdcInit(void)
     ADC2->CR |= 0x00000008; // ADC start of injected conversion
 }
 /**********************************************
- * DACÅäÖÃ
+ * DACï¿½ï¿½ï¿½ï¿½
  * PA4 --> DACOUT1H
  **********************************************/
 static void DacInit(void)
@@ -322,14 +322,14 @@ static void DacInit(void)
     // 1.2 / 2 / 0.3 = 2A
 }
 /**********************************************
- * CORDICÅäÖÃ
+ * CORDICï¿½ï¿½ï¿½ï¿½
  **********************************************/
 static void CORDICInit(void)
 {
     RCC->AHB1ENR |= 0x00000008; // CORDICEN = 1
 }
 ///**********************************************
-//* ¶¨Ê±Æ÷1ÅäÖÃ
+//* ï¿½ï¿½Ê±ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½
 //**********************************************/
 static void Timer1Init(void)
 {
@@ -339,24 +339,24 @@ static void Timer1Init(void)
     TIM1->PSC = 39; // 40/160M = 250ns	x 65536 = 16.384ms
     TIM1->ARR = 0xffff;
     TIM1->RCR = 0;
-    TIM1->CR1 |= 0x0180; // ÉÏÉý¼ÆÊý
+    TIM1->CR1 |= 0x0180; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     TIM1->CCMR1 = 0xf100;
     TIM1->CCER = 0x00b0; // CC2NP = CC2P = CC2E = 1
 
-    TIM1->CR1 |= 0x0001; // Ê¹ÄÜ¶¨Ê±Æ÷1¼ÆÊý
+    TIM1->CR1 |= 0x0001; // Ê¹ï¿½Ü¶ï¿½Ê±ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½
 }
 /**********************************************
- * NVICÖÐ¶ÏÅäÖÃ
+ * NVICï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½
  * ADC1_2_IRQHandler	IRQ = 18
  **********************************************/
 static void NvicInit(void)
 {
-    NVIC->ISER[0] |= 0x00040000; // IRQ = 18 ADCÖÐ¶Ï
-    NVIC->IP[18] = 0x00;         // ÓÅÏÈ¼¶×î¸ß
+    NVIC->ISER[0] |= 0x00040000; // IRQ = 18 ADCï¿½Ð¶ï¿½
+    NVIC->IP[18] = 0x00;         // ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½
 }
 /**********************************************
- * ¼òµ¥ÑÓÊ±º¯Êý
+ * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
  **********************************************/
 static void delay(unsigned int time)
 {

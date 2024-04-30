@@ -3,22 +3,11 @@
 
 #include "userMain.h"
 
-typedef enum
-{
-    MOTOR_STOP,
-    MOTOR_START,
-    MOTOR_WAIT,
-    MOTOR_RUN,
-} MotorState;
 
-typedef struct
-{
-    unsigned short int Tick;
-    unsigned int Tick1s;
-    unsigned short int FaultNum;
-    MotorState state;
-    SvPwm svPwm;
-} Motor;
+#define I_KP 0.125f
+#define I_KI 0.0039f
+#define I_LIMIT 0.84f
 void motorInit();
 void motor1Drive();
+extern tGlobal_TypeDef tGlobal;
 #endif

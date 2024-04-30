@@ -1,4 +1,4 @@
-User/Adc.o: ../User/Adc.c ../User/Adc.h ../User/userMain.h \
+User/Adc.o: ../User/Adc.c ../User/motor.h ../User/userMain.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -36,8 +36,8 @@ User/Adc.o: ../User/Adc.c ../User/Adc.h ../User/userMain.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/tim.h ../Core/Inc/main.h
-../User/Adc.h:
+ ../Core/Inc/tim.h ../Core/Inc/main.h ../User/Adc.h
+../User/motor.h:
 ../User/userMain.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -78,3 +78,4 @@ User/Adc.o: ../User/Adc.c ../User/Adc.h ../User/userMain.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
+../User/Adc.h:
