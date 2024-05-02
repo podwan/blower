@@ -44,28 +44,25 @@ typedef struct
 /*===========================================================================*/
 typedef struct
 {
-    unsigned short int IaValue;
-    unsigned short int IbValue;
+    float angle_el;
+    float offset_ia;
+    float offset_ib;
 
-    signed short int Ia;
-    signed short int Ib;
-    signed short int Ic;
+    signed short int A;
+    signed short int B;
 
-    signed short int Ialpha;
-    signed short int Ibeta;
-   
+    signed short int alpha;
+    signed short int beta;
 
-    signed short int Id;
-    signed short int Iq;
-
-    signed short int IoffsetA;
-    signed short int IoffsetB;
+    signed short int D;
+    signed short int Q;
 
     signed short int IdGiven;
     signed short int IqGiven;
 
     signed short int ParkAngle;
 } Currents;
+
 /*===========================================================================*/
 typedef enum
 {
@@ -86,7 +83,7 @@ typedef struct
     float error_prev;    //!< last tracking error value
     float output_prev;   //!< last pid output value
     float integral_prev; //!< last integral component value
-    float Ts;
+    float Ts;            // PID调节周期
 } PidController;
 /*===========================================================================*/
 
@@ -95,6 +92,7 @@ typedef struct
     unsigned short int Tick;
     unsigned int Tick1s;
     unsigned short int FaultNum;
+    float angle_el;
     MotorState state;
     Voltages voltages;
     Currents currents;

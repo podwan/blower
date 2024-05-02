@@ -11,7 +11,7 @@ Motor motor1;
 void motorInit()
 {
     motor1.state = MOTOR_STOP;
-    motor1.voltages.percentMax = MAX_PERCENT;
+//    motor1.voltages.percentMax = MAX_PERCENT;
     motor1.voltages.setPwm = setPwm1;
     tGlobal.OffsetReq = 1;
     CurrentInitialize(&motor1);
@@ -67,7 +67,7 @@ void motor1Drive()
                 }
                 else
                 {
-                    GetCurrentOffset();
+                   // GetCurrentOffset();
                     motor1.state = MOTOR_START;
 
                     tGlobal.RunTime = 0;
@@ -95,7 +95,7 @@ void motor1Drive()
 
         case MOTOR_RUN:
             Open6WorkPwm1();
-            motor1.voltages.percent = 0.15;
+//            motor1.voltages.percent = 0.15;
             motor1.voltages.eAngle += 0.01;
             if (motor1.voltages.eAngle > _2PI)
                 motor1.voltages.eAngle = 0;
@@ -110,6 +110,6 @@ void motor1Drive()
     // DAC看波形
 
     //    DAC->DHR12R1 = motor1.voltages.eAngle ;
-    DAC->DHR12R1 = motor1.voltages.CCR1;
+//    DAC->DHR12R1 = motor1.voltages.CCR1;
 }
 

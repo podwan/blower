@@ -1,0 +1,5 @@
+../User/bldcMotor.c:4:6:calibrateOffsets	32	static
+../User/bldcMotor.c:22:6:getPhaseCurrents	24	static
+../User/bldcMotor.c:31:13:getABCurrents	16	static
+../User/bldcMotor.c:41:13:getDQCurrents	24	static
+../User/bldcMotor.c:50:6:getDQVoltages	16	static
