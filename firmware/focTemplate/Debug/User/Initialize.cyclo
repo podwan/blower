@@ -1,0 +1,12 @@
+../User/Initialize.c:29:6:Initialize	1
+../User/Initialize.c:45:13:SysClockInit	3
+../User/Initialize.c:87:13:GpioInit	1
+../User/Initialize.c:112:13:PwmInit	1
+../User/Initialize.c:172:13:CompInit	1
+../User/Initialize.c:195:13:OpAmpInit	1
+../User/Initialize.c:224:13:AdcInit	5
+../User/Initialize.c:310:13:DacInit	1
+../User/Initialize.c:327:13:CORDICInit	1
+../User/Initialize.c:334:13:Timer1Init	1
+../User/Initialize.c:353:13:NvicInit	1
+../User/Initialize.c:361:13:delay	2

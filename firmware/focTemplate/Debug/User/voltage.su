@@ -1,0 +1,6 @@
+../User/voltage.c:9:13:getSector	16	static
+../User/voltage.c:22:13:getXYZ	16	static
+../User/voltage.c:33:13:vectorActionTimeCalculate	32	static
+../User/voltage.c:55:13:setSvPwm	32	static
+../User/voltage.c:131:6:setPhaseVoltage	16	static
+../User/voltage.c:138:6:getPercentTheta	24	static

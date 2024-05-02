@@ -1,0 +1,3 @@
+../User/sensor.c:547:6:sensoring	16	static
+../User/sensor.c:684:21:search4temp	40	static
+../User/sensor.c:721:6:getTemp	16	static

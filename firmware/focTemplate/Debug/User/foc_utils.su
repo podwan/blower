@@ -1,0 +1,7 @@
+../User/foc_utils.c:6:29:_sin	32	static
+../User/foc_utils.c:43:29:_cos	24	static
+../User/foc_utils.c:50:28:_sincos	24	static
+../User/foc_utils.c:62:29:_atan2	56	static
+../User/foc_utils.c:88:29:_normalizeAngle	24	static
+../User/foc_utils.c:95:7:_electricalAngle	16	static
+../User/foc_utils.c:103:29:_sqrtApprox	24	static

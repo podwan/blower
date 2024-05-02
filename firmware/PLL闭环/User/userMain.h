@@ -35,18 +35,28 @@ typedef struct
 {
     signed short int Ualpha;
     signed short int Ubeta;
+
     signed short int Ud;
     signed short int Uq;
-    signed short int X;
-    signed short int Y;
-    signed short int Z;
+
+    float X;
+    float Y;
+    float Z;
+
+    float eAngle;
     unsigned short int sector;
+
+    float Us;
+    float UsMax;
+    float UsdAngle;
+
     unsigned short int percentMax;
     unsigned short int percent;
-    signed short int eAngle;
+
     unsigned short int TaOut;
     unsigned short int TbOut;
     unsigned short int TcOut;
+
     unsigned short int CCR1;
     unsigned short int CCR2;
     unsigned short int CCR3;
