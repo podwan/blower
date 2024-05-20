@@ -12,7 +12,7 @@
 
 ![](G:\workSpace\KX\121_blower\doc\公因式.png)
 
-
+![M项](G:\workSpace\KX\121_blower\doc\M项.png)
 
 ![扇区1](G:\workSpace\KX\121_blower\doc\扇区1.jpg)
 
@@ -51,3 +51,11 @@
 3. 电压
 
    将直流电压
+
+# 2024/5/20
+
+![矢量的合成与分解](C:\Users\18575\Desktop\blower\doc\矢量的合成与分解.jpg)
+
+1. 用PI控制器算出Ud, Uq
+2. 根据Ud, Uq 算出Us, 和 θsd后SVPWM
+3. Ualpha和Ubeta用于电角度的估算
