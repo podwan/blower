@@ -1,3 +1,0 @@
-../User/key.c:10:6:keyScan	16	static
-../User/key.c:600:6:getSwitchClosed	4	static
-../User/key.c:605:6:getKeyState	24	static

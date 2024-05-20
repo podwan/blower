@@ -1,4 +1,0 @@
-../User/pwm.c:5:6:setPwm1	1
-../User/pwm.c:12:6:Close6Pwm1	1
-../User/pwm.c:19:6:Open3LowPwm1	1
-../User/pwm.c:30:6:Open6WorkPwm1	1

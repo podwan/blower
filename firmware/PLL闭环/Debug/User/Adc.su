@@ -1,3 +1,0 @@
-../User/Adc.c:7:6:AdcSample	4	static
-../User/Adc.c:26:6:InitAdcOffset	4	static
-../User/Adc.c:36:6:CalAdcOffset	4	static

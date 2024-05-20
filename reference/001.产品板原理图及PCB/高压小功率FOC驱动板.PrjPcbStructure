@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=0-模块总图.SchDoc
+Record=SheetSymbol|SourceDocument=0-模块总图.SchDoc|Designator=U_1-高压小功率FOC驱动板|SchDesignator=U_1-高压小功率FOC驱动板|FileName=1-电源及加热部分.SchDoc|SymbolType=Normal|RawFileName=1-电源及加热部分.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=0-模块总图.SchDoc|Designator=U_2-高压小功率FOC驱动板|SchDesignator=U_2-高压小功率FOC驱动板|FileName=2-MCU部分.SchDoc|SymbolType=Normal|RawFileName=2-MCU部分.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=0-模块总图.SchDoc|Designator=U_3-高压小功率FOC驱动板|SchDesignator=U_3-高压小功率FOC驱动板|FileName=3-H桥驱动.SchDoc|SymbolType=Normal|RawFileName=3-H桥驱动.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

@@ -1,0 +1,123 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\Project_blower.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\Project_blower.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Mar 22 00:40:06 2024
+<BR><P>
+<H3>Maximum Stack Usage =         16 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Main &rArr; Initialize &rArr; PwmInit
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[1]">ADC1_2_IRQHandler</a> from main.o(i.ADC1_2_IRQHandler) referenced from startup.o(RESET)
+ <LI><a href="#[2]">Main</a> from main.o(i.Main) referenced from startup.o(.text)
+ <LI><a href="#[3]">Reset_Handler</a> from startup.o(.text) referenced from startup.o(RESET)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[3]"></a>Reset_Handler</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, startup.o(.text))
+
+<P><STRONG><a name="[1]"></a>ADC1_2_IRQHandler</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, main.o(i.ADC1_2_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC1_2_IRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdcSample
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTimeCount
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[4]"></a>AdcSample</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, adc.o(i.AdcSample))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_2_IRQHandler
+</UL>
+
+<P><STRONG><a name="[8]"></a>Initialize</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, initialize.o(i.Initialize))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Initialize &rArr; PwmInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1Init
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClockInit
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PwmInit
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OpAmpInit
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvicInit
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GpioInit
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DacInit
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CompInit
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CORDICInit
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdcInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Main
+</UL>
+
+<P><STRONG><a name="[2]"></a>Main</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(i.Main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Main &rArr; Initialize &rArr; PwmInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(.text)
+</UL><P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[6]"></a>AdcInit</STRONG> (Thumb, 376 bytes, Stack size 8 bytes, initialize.o(i.AdcInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = AdcInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[f]"></a>CORDICInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, initialize.o(i.CORDICInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[d]"></a>CompInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, initialize.o(i.CompInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[b]"></a>DacInit</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, initialize.o(i.DacInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[a]"></a>GpioInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, initialize.o(i.GpioInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[11]"></a>NvicInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, initialize.o(i.NvicInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[c]"></a>OpAmpInit</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, initialize.o(i.OpAmpInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[e]"></a>PwmInit</STRONG> (Thumb, 454 bytes, Stack size 8 bytes, initialize.o(i.PwmInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PwmInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[9]"></a>SysClockInit</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, initialize.o(i.SysClockInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[10]"></a>Timer1Init</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, initialize.o(i.Timer1Init))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initialize
+</UL>
+
+<P><STRONG><a name="[7]"></a>delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, initialize.o(i.delay))
+<BR><BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PwmInit
+<LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdcInit
+</UL>
+
+<P><STRONG><a name="[5]"></a>SysTimeCount</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, main.o(i.SysTimeCount))
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_2_IRQHandler
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

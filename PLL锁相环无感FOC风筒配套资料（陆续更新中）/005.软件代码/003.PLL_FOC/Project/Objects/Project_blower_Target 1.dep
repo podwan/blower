@@ -1,91 +1,0 @@
-Dependencies for Project 'Project_blower', Target 'Target 1': (DO NOT MODIFY !)
-CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (..\Source\Initialize.c)(0x66174B0D)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\initialize.o --omf_browse .\objects\initialize.crf --depend .\objects\initialize.d)
-I (..\Source\..\Include\Initialize.h)(0x660A2485)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\UserParams.h)(0x66181A75)
-F (..\Source\Main.c)(0x66178871)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\Source\..\Include\Main.h)(0x66175633)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Startup.s)(0x65D58420)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529" --pd "STM32G431xx SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
-F (..\Source\Led.c)(0x660D19B1)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
-I (..\Source\..\Include\Led.h)(0x66057D73)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Key.c)(0x660D2053)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
-I (..\Source\..\Include\Key.h)(0x660A249E)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Motor.c)(0x660D2758)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\motor.o --omf_browse .\objects\motor.crf --depend .\objects\motor.d)
-I (..\Source\..\Include\Motor.h)(0x6613AA70)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Switch.c)(0x6613F768)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\switch.o --omf_browse .\objects\switch.crf --depend .\objects\switch.d)
-I (..\Source\..\Include\Switch.h)(0x66057D9A)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Heat.c)(0x66140DD2)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\heat.o --omf_browse .\objects\heat.crf --depend .\objects\heat.d)
-I (..\Source\..\Include\Heat.h)(0x6613ED7B)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Adc.c)(0x66140DFE)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
-I (..\Source\..\Include\Adc.h)(0x66057DAA)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Math.c)(0x660AE3E6)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\math.o --omf_browse .\objects\math.crf --depend .\objects\math.d)
-I (..\Source\..\Include\Math.h)(0x660ACBAD)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Protect.c)(0x6614AF10)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\protect.o --omf_browse .\objects\protect.crf --depend .\objects\protect.d)
-I (..\Source\..\Include\Protect.h)(0x6614B0B4)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Source\Flash.c)(0x66165F77)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\flash.o --omf_browse .\objects\flash.crf --depend .\objects\flash.d)
-I (..\Source\..\Include\Flash.h)(0x6613BE33)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\Define.h)(0x660D2215)
-F (..\Include\Define.h)(0x660D2215)()
-F (..\Include\Initialize.h)(0x660A2485)()
-F (..\Include\Main.h)(0x66175633)()
-F (..\Include\stm32g431.h)(0x65D5AD35)()
-F (..\Include\Led.h)(0x66057D73)()
-F (..\Include\Key.h)(0x660A249E)()
-F (..\Include\Motor.h)(0x6613AA70)()
-F (..\Include\Switch.h)(0x66057D9A)()
-F (..\Include\Heat.h)(0x6613ED7B)()
-F (..\Include\Adc.h)(0x66057DAA)()
-F (..\Include\Math.h)(0x660ACBAD)()
-F (..\Include\Protect.h)(0x6614B0B4)()
-F (..\Include\Flash.h)(0x6613BE33)()
-F (..\Readme\Description.txt)(0x66057EAA)()
-F (..\Source\Current.c)(0x660ABA82)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\current.o --omf_browse .\objects\current.crf --depend .\objects\current.d)
-I (..\Source\..\Include\Current.h)(0x660AB9AC)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\CoreDef.h)(0x660ACF2C)
-F (..\Source\Pi.c)(0x660AC462)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\pi.o --omf_browse .\objects\pi.crf --depend .\objects\pi.d)
-I (..\Source\..\Include\Pi.h)(0x66057DDF)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\CoreDef.h)(0x660ACF2C)
-F (..\Source\Voltage.c)(0x66179F74)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\voltage.o --omf_browse .\objects\voltage.crf --depend .\objects\voltage.d)
-I (..\Source\..\Include\Voltage.h)(0x660A1F4B)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\CoreDef.h)(0x660ACF2C)
-I (..\Source\..\Include\..\Include\UserParams.h)(0x66181A75)
-F (..\Source\Pll.c)(0x660AF151)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\pll.o --omf_browse .\objects\pll.crf --depend .\objects\pll.d)
-I (..\Source\..\Include\Pll.h)(0x6605807C)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\CoreDef.h)(0x660ACF2C)
-I (..\Source\..\Include\..\Include\UserParams.h)(0x66181A75)
-F (..\Source\Core.c)(0x6618A102)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\core.o --omf_browse .\objects\core.crf --depend .\objects\core.d)
-I (..\Source\..\Include\Core.h)(0x66189998)
-I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
-I (..\Source\..\Include\..\Include\CoreDef.h)(0x660ACF2C)
-I (..\Source\..\Include\..\Include\UserParams.h)(0x66181A75)
-F (..\Include\Current.h)(0x660AB9AC)()
-F (..\Include\Pi.h)(0x66057DDF)()
-F (..\Include\Voltage.h)(0x660A1F4B)()
-F (..\Include\Pll.h)(0x6605807C)()
-F (..\Include\Core.h)(0x66189998)()
-F (..\Include\CoreDef.h)(0x660ACF2C)()
-F (..\Include\UserParams.h)(0x66181A75)()

@@ -1,8 +1,0 @@
-../User/app.c:44:6:appInit	1
-../User/app.c:48:6:appRunning	8
-../User/app.c:194:13:poweringOn	2
-../User/app.c:269:13:standingby	1
-../User/app.c:272:13:setting	1
-../User/app.c:275:13:working	1
-../User/app.c:279:13:testing	1
-../User/app.c:283:13:faulting	1

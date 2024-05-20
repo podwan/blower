@@ -1,5 +1,0 @@
-../User/bldcMotor.c:4:6:calibrateOffsets	2
-../User/bldcMotor.c:22:6:getPhaseCurrents	1
-../User/bldcMotor.c:31:13:getABCurrents	1
-../User/bldcMotor.c:41:13:getDQCurrents	1
-../User/bldcMotor.c:50:6:getDQVoltages	1

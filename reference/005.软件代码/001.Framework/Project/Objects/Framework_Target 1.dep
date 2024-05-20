@@ -1,0 +1,23 @@
+Dependencies for Project 'Framework', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\Source\Initialize.c)(0x65FC5548)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\initialize.o --omf_browse .\objects\initialize.crf --depend .\objects\initialize.d)
+I (..\Source\..\Include\Initialize.h)(0x65FC2273)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\UserParams.h)(0x65FC228E)
+F (..\Source\Main.c)(0x65FC606E)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\Source\..\Include\Main.h)(0x65FC2278)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\Define.h)(0x65FC226F)
+F (..\Source\Startup.s)(0x65F2665B)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529" --pd "STM32G431xx SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (..\Source\Adc.c)(0x65FC226A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections --strict -I ..\Include-I.\RTE\_Target_1-IE:\MDK\Packs\Keil\STM32G4xx_DFP\1.2.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-IE:\MDK\KEILARM\ARM\CMSIS\Include-D__UVISION_VERSION="529" -DSTM32G431xx-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\Source\..\Include\Adc.h)(0x65FC227E)
+I (..\Source\..\Include\..\Include\stm32g431.h)(0x65D5AD35)
+I (..\Source\..\Include\..\Include\Define.h)(0x65FC226F)
+F (..\Include\Define.h)(0x65FC226F)()
+F (..\Include\Initialize.h)(0x65FC2273)()
+F (..\Include\Main.h)(0x65FC2278)()
+F (..\Include\stm32g431.h)(0x65D5AD35)()
+F (..\Include\Adc.h)(0x65FC227E)()
+F (..\Readme\Description.txt)(0x65F31ADB)()
+F (..\Include\CoreDef.h)(0x65FC2287)()
+F (..\Include\UserParams.h)(0x65FC228E)()

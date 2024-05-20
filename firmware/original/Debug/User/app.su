@@ -1,8 +1,0 @@
-../User/app.c:44:6:appInit	4	static
-../User/app.c:48:6:appRunning	8	static
-../User/app.c:194:13:poweringOn	4	static
-../User/app.c:269:13:standingby	4	static
-../User/app.c:272:13:setting	4	static
-../User/app.c:275:13:working	4	static
-../User/app.c:279:13:testing	4	static
-../User/app.c:283:13:faulting	4	static

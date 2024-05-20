@@ -1,6 +1,0 @@
-../User/current.c:17:6:currentInitialize	16	static
-../User/current.c:34:13:GetIabc	24	static
-../User/current.c:52:13:GetIalphabeta	16	static
-../User/current.c:59:6:GetCurrentOffset	16	static
-../User/current.c:69:13:GetIdq	24	static
-../User/current.c:76:6:currentSample	16	static
