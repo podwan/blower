@@ -1,0 +1,3 @@
+../User/knob.c:3:6:knobSimulatorInit	16	static
+../User/knob.c:28:6:knobSimulatorSetMode	16	static
+../User/knob.c:108:6:knobSimulatorTick	16	static

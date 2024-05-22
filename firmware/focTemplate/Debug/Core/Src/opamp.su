@@ -1,0 +1,5 @@
+../Core/Src/opamp.c:32:6:MX_OPAMP1_Init	8	static
+../Core/Src/opamp.c:60:6:MX_OPAMP2_Init	8	static
+../Core/Src/opamp.c:88:6:MX_OPAMP3_Init	8	static
+../Core/Src/opamp.c:116:6:HAL_OPAMP_MspInit	48	static
+../Core/Src/opamp.c:185:6:HAL_OPAMP_MspDeInit	16	static

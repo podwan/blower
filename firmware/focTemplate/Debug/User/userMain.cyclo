@@ -1,0 +1,4 @@
+../User/userMain.c:34:6:userMain	4
+../User/userMain.c:55:7:map	1
+C:\ST\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/stdio.h:220:5:fputc	2
+../User/userMain.c:68:6:HAL_TIM_IC_CaptureCallback	1

@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "usermain.h": "c",
+        "voltage.h": "c",
+        "as5407.h": "c",
+        "foc_utils.h": "c",
+        "mt6701.h": "c",
+        "comm.h": "c",
+        "cstdlib": "c",
+        "focmotor.h": "c",
+        "math_utils.h": "c",
+        "usertimer.h": "c",
+        "bldcmotor.h": "c",
+        "foclib.h": "c"
+    }
+}

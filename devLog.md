@@ -59,3 +59,25 @@
 1. 用PI控制器算出Ud, Uq
 2. 根据Ud, Uq 算出Us, 和 θsd后SVPWM
 3. Ualpha和Ubeta用于电角度的估算
+
+# 2024/5/21
+
+同样的二级制数据，根据不同的运算规则可以代表不同的数据
+
+
+
+![image-20240521200616932](C:\Users\18575\AppData\Roaming\Typora\typora-user-images\image-20240521200616932.png)
+
+# 2024/5/24
+
+![锁相环位置估算1](C:\Users\18575\Desktop\blower\doc\锁相环位置估算1.jpg)
+
+1. 根据电机方程， 由Ualpha, Ubeta, Ialpha和Ibeta  得到反电动势Ealpha, Ebeta
+2. 由Ealpha和Ebeta结合角度得到Ed, Eq， 即得到角度θ和Ed的方程式：
+3. 如果theta估算正确则Ed始终为零
+
+![](C:\Users\18575\Desktop\blower\doc\锁相环位置估算2.jpg)
+
+将0-Ed为误差量输入PI控制器，用反馈得到的量对θest进行修正，
+
+逆时针： Δθ∝-Ed  顺时针： Δθ∝Ed

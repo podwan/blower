@@ -1,0 +1,4 @@
+../User/motor.c:8:6:motorInit	1
+../User/motor.c:17:6:velocityOpenLoop	1
+../User/motor.c:25:13:setPwm1	1
+../User/motor.c:32:6:setPhaseVoltage1	11

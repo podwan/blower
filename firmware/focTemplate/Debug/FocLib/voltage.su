@@ -1,0 +1,4 @@
+../FocLib/voltage.c:8:6:getDQVoltages	16	static
+../FocLib/voltage.c:22:6:getABVoltages	24	static
+../FocLib/voltage.c:240:6:setTorque	64	static
+../FocLib/voltage.c:283:6:svpwm_test	24	static

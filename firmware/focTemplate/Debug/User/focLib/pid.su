@@ -1,0 +1,3 @@
+../User/focLib/pid.c:4:6:pidInit	40	static
+../User/focLib/pid.c:18:7:pidOperator	48	static
+../User/focLib/pid.c:58:6:reset	16	static

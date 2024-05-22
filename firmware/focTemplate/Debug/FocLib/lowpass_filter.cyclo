@@ -1,0 +1,2 @@
+../FocLib/lowpass_filter.c:3:6:lpfInit	1
+../FocLib/lowpass_filter.c:10:7:lpfOperator	1

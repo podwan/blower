@@ -1,0 +1,8 @@
+../User/foc.c:4:6:calibrateOffsets	2
+../User/foc.c:22:13:getPhaseCurrents	1
+../User/foc.c:36:13:getABCurrents	1
+../User/foc.c:49:13:getDQCurrents	1
+../User/foc.c:58:6:getDQVoltages	1
+../User/foc.c:72:6:getABVoltages	1
+../User/foc.c:81:13:SVPWM	9
+../User/foc.c:155:6:currentLoop	1

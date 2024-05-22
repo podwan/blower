@@ -1,0 +1,2 @@
+../FocLib/encoder.c:4:6:encoderInit	1
+../FocLib/encoder.c:18:6:encoderUpdate	3

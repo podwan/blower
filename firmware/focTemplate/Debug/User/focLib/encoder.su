@@ -1,0 +1,2 @@
+../User/focLib/encoder.c:4:6:encoderInit	24	static
+../User/focLib/encoder.c:18:6:encoderUpdate	24	static

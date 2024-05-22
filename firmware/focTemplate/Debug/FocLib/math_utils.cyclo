@@ -1,0 +1,7 @@
+../FocLib/math_utils.c:6:29:_sin	4
+../FocLib/math_utils.c:43:29:_cos	2
+../FocLib/math_utils.c:50:28:_sincos	1
+../FocLib/math_utils.c:62:29:_atan2	4
+../FocLib/math_utils.c:88:29:_normalizeAngle	2
+../FocLib/math_utils.c:95:7:_electricalAngle	1
+../FocLib/math_utils.c:103:29:_sqrtApprox	1

@@ -1,0 +1,6 @@
+../User/as5407.c:7:10:Parity_bit_Calculate	2
+../User/as5407.c:18:10:SPI_ReadWrite_OneByte	2
+../User/as5407.c:32:10:as5047readRawData	2
+../User/as5407.c:49:7:as5047GetRawAngle	1
+../User/as5407.c:56:7:as5047GetFullAngle	3
+../User/as5407.c:76:7:as5047GetVelocity	1

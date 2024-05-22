@@ -1,0 +1,5 @@
+../User/bldcMotor.c:13:6:motorInit	1
+../User/bldcMotor.c:25:13:setPwm1	1
+../User/bldcMotor.c:32:6:getZeroElecAngle	1
+../User/bldcMotor.c:40:6:getElecAngle	1
+../User/bldcMotor.c:45:6:foc	2

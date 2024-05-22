@@ -1,0 +1,4 @@
+../FocLib/current.c:7:6:getCurrentOffsets	40	static
+../FocLib/current.c:30:6:getPhaseCurrents	32	static
+../FocLib/current.c:44:6:getABCurrents	16	static
+../FocLib/current.c:57:6:getDQCurrents	24	static

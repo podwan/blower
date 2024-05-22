@@ -1,0 +1,8 @@
+../User/foc.c:4:6:calibrateOffsets	32	static
+../User/foc.c:22:13:getPhaseCurrents	24	static
+../User/foc.c:36:13:getABCurrents	16	static
+../User/foc.c:49:13:getDQCurrents	24	static
+../User/foc.c:58:6:getDQVoltages	24	static
+../User/foc.c:72:6:getABVoltages	24	static
+../User/foc.c:81:13:SVPWM	56	static
+../User/foc.c:155:6:currentLoop	72	static

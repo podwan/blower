@@ -1,0 +1,3 @@
+../User/key.c:5:6:getKeyFlags	8	static
+../User/key.c:59:6:keyScan	16	static
+../User/key.c:255:6:getKeyState	24	static

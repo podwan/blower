@@ -1,0 +1,10 @@
+../User/app.c:27:13:startPwm1	8	static
+../User/app.c:36:13:stopPwm1	8	static
+../User/app.c:45:13:updatePwm1	16	static
+../User/app.c:52:13:motorInit	32	static
+../User/app.c:117:6:appInit	8	static
+../User/app.c:122:6:appRunning	32	static
+../User/app.c:179:13:standingBy	8	static
+../User/app.c:197:13:working	4	static
+../User/app.c:227:6:txDataProcess	120	static
+../User/app.c:235:6:HAL_ADCEx_InjectedConvCpltCallback	16	static
